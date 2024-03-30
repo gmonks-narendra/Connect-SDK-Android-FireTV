@@ -74,7 +74,7 @@ public class FireTVService extends DeviceService implements MediaPlayer, MediaCo
     private static final String META_SRCLANG = "srclang";
     private static final String META_LABEL = "label";
 
-    private final RemoteMediaPlayer remoteMediaPlayer;
+    public final RemoteMediaPlayer remoteMediaPlayer;
     private PlayStateSubscription playStateSubscription;
 
     public FireTVService(ServiceDescription serviceDescription, ServiceConfig serviceConfig) {
@@ -252,10 +252,6 @@ public class FireTVService extends DeviceService implements MediaPlayer, MediaCo
                 .setDescription(description)
                 .setIcon(iconSrc)
                 .build(), listener);
-    }
-
-    public RemoteMediaPlayer getRemoteService(){
-        return remoteMediaPlayer
     }
 
     /**
