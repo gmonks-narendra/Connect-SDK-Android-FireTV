@@ -254,6 +254,10 @@ public class FireTVService extends DeviceService implements MediaPlayer, MediaCo
                 .build(), listener);
     }
 
+    public RemoteMediaPlayer getRemoteService(){
+        return remoteMediaPlayer
+    }
+
     /**
      * Play audio/video
      * @param url media source
@@ -487,6 +491,7 @@ public class FireTVService extends DeviceService implements MediaPlayer, MediaCo
         getPlayState(listener);
         return playStateSubscription;
     }
+
 
     PlayStateStatus createPlayStateStatusFromFireTVStatus(MediaPlayerStatus status) {
         PlayStateStatus playState = PlayStateStatus.Unknown;
